@@ -1,14 +1,33 @@
+#
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: 10
+#   username: postgres
+#   host: postgres
+
+# development:
+#   <<: *default
+#   database: gameoflife_development
+
+# test:
+#   <<: *default
+#   database: gameoflife_test
+
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: 10
+  host: localhost
   username: postgres
-  host: postgres
+  password: postgres
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
 
 development:
   <<: *default
-  database: socianalyzr_development
+  database: gameoflife_development
 
 test:
   <<: *default
-  database: socianalyzr_test
+  database: gameoflife_test
+  username: postgres
+
