@@ -1,26 +1,10 @@
-#
-# default: &default
-#   adapter: postgresql
-#   encoding: unicode
-#   pool: 10
-#   username: postgres
-#   host: postgres
-
-# development:
-#   <<: *default
-#   database: gameoflife_development
-
-# test:
-#   <<: *default
-#   database: gameoflife_test
 
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
-  username: postgres
-  password: postgres
   pool: 10
+  username: postgres
+  host: postgres
 
 development:
   <<: *default
@@ -29,5 +13,21 @@ development:
 test:
   <<: *default
   database: gameoflife_test
-  username: postgres
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   host: localhost
+#   username: postgres
+#   password: postgres
+#   pool: 10
+
+# development:
+#   <<: *default
+#   database: gameoflife_development
+
+# test:
+#   <<: *default
+#   database: gameoflife_test
+#   username: postgres
 

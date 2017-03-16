@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: vlaguzman/gameoflife1:1
+    image: vlaguzman/gameoflife:1
     shm_size: 128m
     stdin_open: true
     ports:

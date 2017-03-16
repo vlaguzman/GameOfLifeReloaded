@@ -1,4 +1,4 @@
-FROM ruby:2.2.3
+FROM ruby:2.3.3
 
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
 RUN apt-get update -y
